@@ -1,0 +1,11 @@
+-- In the job_posting_fact table only get jobs that have an average yearly salary of $65000 or greater. 
+-- Also get the job_id, job_title_short, job_location, job_via, and salary_year_avg columns. 
+SELECT 
+	job_id, 
+    job_title_short, 
+    job_location, 
+    job_via,
+    salary_year_avg
+FROM job_postings_fact
+WHERE salary_year_avg > 65000
+
