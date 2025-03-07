@@ -38,3 +38,13 @@ FROM job_postings_fact
 WHERE (job_title_short LIKE '%Data%' OR '%Business%') AND
     (job_title_short LIKE '%Analyst%') AND
     job_title NOT LIKE '%Senior%'
+
+-- PROBLEM 4 SQL FOR DATA ANALYSIS
+-- in the job_posting_fact table count the total number of job postings that offer health insurance. 
+-- Use the job_health_insurance column to determine if a job posting offers health insurance (True means it does offer health insurance
+SELECT 
+	COUNT(*) AS total_health_insurance_jobs
+	
+FROM job_postings_fact
+WHERE 
+	job_health_insurance = 1;
