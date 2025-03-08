@@ -213,6 +213,22 @@ ORDER BY
 	salary_year_avg
 
 
+--- Left join
+
+SELECT 
+	job_postings.job_id,
+    job_postings.job_title_short,
+    
+    companies.name AS company
+	
+	
+	
+FROM job_postings_fact AS job_postings
+LEFT JOIN company_dim AS companies
+	ON job_postings.company_id = companies.company_id
+	
+
+
 
 
  
